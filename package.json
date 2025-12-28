@@ -1,0 +1,82 @@
+{
+  "name": "lookaway",
+  "displayName": "Look Away",
+  "description": "Reminds you to follow the 20-20-20 rule: every 20 minutes, look at something 20 feet away for 20 seconds",
+  "version": "0.0.1",
+  "publisher": "YOUR_PUBLISHER_NAME",
+  "repository": {
+    "type": "git",
+    "url": "YOUR_REPO_URL"
+  },
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "health",
+    "eye-care",
+    "reminder",
+    "break",
+    "20-20-20",
+    "productivity",
+    "wellness"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Look Away",
+      "properties": {
+        "lookaway.intervalMinutes": {
+          "type": "number",
+          "default": 20,
+          "minimum": 1,
+          "maximum": 120,
+          "description": "Interval in minutes between reminders to look away"
+        },
+        "lookaway.durationSeconds": {
+          "type": "number",
+          "default": 20,
+          "minimum": 5,
+          "maximum": 300,
+          "description": "Duration in seconds to look away"
+        },
+        "lookaway.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable or disable the look away reminders"
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "lookaway.skip",
+        "title": "Skip Current Reminder"
+      },
+      {
+        "command": "lookaway.pause",
+        "title": "Pause Reminders"
+      },
+      {
+        "command": "lookaway.resume",
+        "title": "Resume Reminders"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/node": "16.x",
+    "typescript": "^4.9.4"
+  }
+}
+
