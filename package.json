@@ -3,14 +3,14 @@
   "displayName": "Look Away",
   "description": "Reminds you to follow the 20-20-20 rule: every 20 minutes, look at something 20 feet away for 20 seconds",
   "version": "0.0.1",
-  "publisher": "AadityaThakkar",
+  "publisher": "aadityathakkar",
   "repository": {
     "type": "git",
     "url": "https://github.com/Aaditya-T/lookaway.git"
   },
   "license": "MIT",
   "engines": {
-    "vscode": "^1.74.0"
+    "vscode": "^1.75.0"
   },
   "categories": [
     "Other"
@@ -77,6 +77,7 @@
     "@types/vscode": "^1.74.0",
     "@types/node": "16.x",
     "typescript": "^4.9.4"
-  }
+  },
+  "icon": "logo.png"
 }
 
